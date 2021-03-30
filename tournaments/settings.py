@@ -372,7 +372,7 @@ enter a command to register or unregister.
             await self.data.guild(guild).channels.to.set(channel.id)
             await ctx.send(_("The channel was successfully set."))
 
-    @tournamentset_channels.command(name="lag")
+    @tournamentset_channels.command(name="lag", hidden=True)
     async def tournamentset_channels_lag(
         self,
         ctx: commands.Context,
