@@ -377,7 +377,7 @@ enter a command to register or unregister.
         self,
         ctx: commands.Context,
         *,
-        channel: ConfigSelector(discord.TextChannel) = ConfigSelector(),
+        channel: Optional[discord.TextChannel],
     ):
         """
         Set the Lag tests channel.
@@ -385,10 +385,8 @@ enter a command to register or unregister.
         Lag tests announcements requested with the `[p]lag` command will be sent there.
         """
         guild = ctx.guild
-        config = channel.config
-        channel = channel.arg
         if channel is None:
-            await self.data.settings(guild.id, config).channels.lag.set(None)
+            await self.data.guild(guild).channels.lag.set(None)
             await ctx.send(_("Lag tests channel removed."))
             return
         if not channel.permissions_for(guild.me).read_messages:
@@ -396,7 +394,7 @@ enter a command to register or unregister.
         elif not channel.permissions_for(guild.me).send_messages:
             await ctx.send(_("I don't have the permission to send messages in this channel."))
         else:
-            await self.data.settings(guild.id, config).channels.lag.set(channel.id)
+            await self.data.guild(guild).channels.lag.set(channel.id)
             await ctx.send(_("The channel was successfully set."))
 
     @tournamentset_channels.command(name="vipregister", hidden=True)
