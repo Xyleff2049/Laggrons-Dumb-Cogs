@@ -1,6 +1,7 @@
 # Laggron's Dumb Cogs - Red V3
 
 Git Squash Test
+Git Squash Test Second Commit
 
 [![Discord server](https://discordapp.com/api/guilds/363008468602454017/embed.png)](https://discord.gg/AVzjfpR)
 [![Red cogs](https://img.shields.io/badge/Red--DiscordBot-cogs-red.svg)](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop)
