@@ -1,5 +1,7 @@
 # Laggron's Dumb Cogs - Red V3
 
+Git Squash Test
+
 [![Discord server](https://discordapp.com/api/guilds/363008468602454017/embed.png)](https://discord.gg/AVzjfpR)
 [![Red cogs](https://img.shields.io/badge/Red--DiscordBot-cogs-red.svg)](https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop)
 [![discord.py](https://img.shields.io/badge/discord-py-blue.svg)](https://github.com/Rapptz/discord.py)
