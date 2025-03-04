@@ -367,7 +367,7 @@ class ChallongeTournament(Tournament):
     async def add_participant(self, participant: ChallongeParticipant, seed: int = None):
         kwargs = {"seed": seed} if seed is not None else {}
         data = await self.request(
-            achallonge.participants.create, self.id, participant.name, **kwargs
+            achallonge.participants.create, self.id, str(participant), **kwargs
         )
         participant._player_id = data["id"]
         log.debug(
@@ -404,7 +404,7 @@ class ChallongeTournament(Tournament):
             params = {}
             if seed:
                 params.update({"seed": [i for x, i in chunk_participants]})
-            participants = [x[0].name for x in chunk_participants]
+            participants = [str(x[0]) for x in chunk_participants]
             challonge_players = await self.request(
                 achallonge.participants.bulk_add, self.id, participants, **params
             )

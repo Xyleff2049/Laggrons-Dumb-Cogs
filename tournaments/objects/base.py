@@ -2443,7 +2443,7 @@ class Tournament:
         # assign elo ranking to each player
         for player in self.participants:
             try:
-                player.elo = ranking[player.name]
+                player.elo = ranking[str(player)]
                 ranked.append(player)
             except KeyError:
                 player.elo = base_elo  # base Elo if none found
