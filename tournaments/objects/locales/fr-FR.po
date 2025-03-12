@@ -147,7 +147,7 @@ msgstr "\n\n"
 "Code d'accès : {passcode}"
 
 #: tournaments/objects/base.py:514
-msgid "You can go on stream on {channel} !{access}"
+msgid "You can go on stream on {channel} {player1} {player2} !{access}"
 msgstr "Vous pouvez jouer en stream sur {channel} {player1} {player2} !{access}"
 
 #: tournaments/objects/base.py:520
