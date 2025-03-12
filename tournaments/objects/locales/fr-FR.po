@@ -148,7 +148,7 @@ msgstr "\n\n"
 
 #: tournaments/objects/base.py:514
 msgid "You can go on stream on {channel} !{access}"
-msgstr "Vous pouvez jouer en stream sur {channel} !{access}"
+msgstr "Vous pouvez jouer en stream sur {channel} {player1} {player2} !{access}"
 
 #: tournaments/objects/base.py:520
 msgid ":arrow_forward: Sending set {set} ({name}) on stream with **{streamer}**: {player1} vs {player2}"

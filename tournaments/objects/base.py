@@ -511,8 +511,8 @@ class Match:
         self.on_hold = False
         self.checked_dq = True
         await destination(
-            _("You can go on stream on {channel} !{access}").format(
-                channel=self.streamer.link, access=access
+            _("You can go on stream on {channel} {player1} {player2} !{access}").format(
+                channel=self.streamer.link, access=access, player1=self.player1.mention, player2=self.player2.mention
             )
         )
         if self.tournament.stream_channel:
